@@ -1,0 +1,6 @@
+{
+  "id": "vagrant",
+  "password": "$1$huACeJiW$9bQkors9T5nScDRFZDGGi/",
+  "shell" : "\/bin\/zsh",
+  "groups": ["sysadmin", "vagrant", "wheel"]
+}

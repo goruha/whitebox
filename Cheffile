@@ -1,0 +1,138 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+
+#a
+
+cookbook "apache2"
+cookbook "apt"
+
+#b
+
+cookbook "build-essential"
+
+#c
+
+cookbook 'chef-client'
+cookbook "cron"
+cookbook 'chef-solo-search',
+  :git => 'https://github.com/edelight/chef-solo-search',
+  :ref => 'master'
+
+#d
+
+cookbook 'drush',
+  :git => 'https://github.com/vasilykraev/chef-drush.git',
+  :ref => 'master'
+
+#e
+
+#f
+
+cookbook "firewall",
+  :git => 'https://github.com/computerlyrik/chef-firewall.git',
+  :ref => 'master'
+
+#g
+
+cookbook "git"
+
+#h
+
+cookbook "htop"
+
+#i
+
+cookbook "iotop"
+
+#j
+
+cookbook "java"
+
+#k
+
+#l
+
+#m
+
+cookbook "mysql"
+cookbook "memcached"
+
+#n
+
+cookbook "nano"
+cookbook "nginx"
+
+#o
+
+cookbook "openssl"
+
+#p
+
+cookbook 'platform_packages',
+  :git => 'git://github.com/fnichol/chef-platform_packages.git',
+  :ref => 'master'
+
+cookbook 'postgis2',
+  :git => 'git://github.com/vasilykraev/cookbook-postgis.git',
+  :ref => 'master'
+cookbook "postgresql"
+cookbook "postfix"
+
+cookbook "phing",
+  :git => 'https://github.com/goruha/chef-phing',
+  :ref => 'add_shell_timeout_support'
+cookbook "php",
+  :git => 'https://github.com/goruha/chef-php',
+  :ref => 'pear_add_timeout'
+cookbook 'phpmyadmin',
+  :git => 'git://github.com/priestjim/chef-phpmyadmin.git',
+  :ref => 'master'
+cookbook 'phppgadmin',
+  :git => 'git://github.com/arnebrasseur/chef-phppgadmin.git',
+  :ref => 'master'
+cookbook "phpunit"
+
+cookbook "python"
+
+#q
+
+#r
+
+#s
+
+cookbook "sphinx",
+  :git => 'https://github.com/goruha/sphinx-cookbook.git',
+  :ref => 'get_from_svn_sources'
+cookbook "squid"
+cookbook "subversion"
+
+#t
+
+#u
+
+cookbook 'users'
+
+#v
+
+cookbook "varnish"
+cookbook "vim"
+
+#w
+
+#x
+
+#y
+
+cookbook "yumrepo",
+  :git => 'https://github.com/priestjim/yum.git',
+  :ref => 'add-atomic-repository'
+
+#z
+
+cookbook 'zip',
+  :git => 'https://github.com/goruha/chef-zip',
+  :ref => 'support-centos'
+cookbook "zsh"
