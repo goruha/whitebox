@@ -1,0 +1,2 @@
+# Run chef solo 10 minutes
+*/10 * * * *     root   cd <%= @chef_path %> && git pull && librarian-chef update && chef-solo -c <%= @chef_path %>/solo.rb -j <%= @chef_path %>/node.json
