@@ -68,6 +68,7 @@ cookbook "nginx"
 #o
 
 cookbook "openssl"
+cookbook "openssh"
 
 #p
 
