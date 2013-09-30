@@ -1,6 +1,5 @@
 include_recipe "app_nginx"
 include_recipe "app_php"
-include_recipe "app_sciencescape::dev"
 include_recipe "firewall::iptables"
 include_recipe "memcached"
 firewall "iptables" do
