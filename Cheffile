@@ -106,7 +106,7 @@ cookbook "python"
 
 cookbook "sphinx",
   :git => 'https://github.com/goruha/sphinx-cookbook.git',
-  :ref => 'get_from_svn_sources'
+  :ref => 'master'
 cookbook "squid"
 cookbook "subversion"
 
@@ -134,6 +134,7 @@ cookbook "yumrepo",
 #z
 
 cookbook 'zip',
-  :git => 'https://github.com/goruha/chef-zip',
-  :ref => 'support-centos'
+  :git => 'https://github.com/phlipper/chef-zip.git',
+  :ref => 'master'
+
 cookbook "zsh"
