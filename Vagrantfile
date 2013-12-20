@@ -1,8 +1,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu_12_04_2"
   config.vm.box_url = "http://goo.gl/8kWkm"
-
-  config.vm.hostname = 'jenkins.dev'
+  config.omnibus.chef_version = :latest
+  config.vm.hostname = 'ci.apertalab.no-ip.org'
 
   config.vm.network :private_network, ip: "33.33.33.35"
   #config.vm.network :forwarded_port, host: 88, guest: 80
@@ -10,12 +10,24 @@ Vagrant.configure("2") do |config|
   #config.vm.network :forwarded_port, host: 3306, guest: 3306
   #config.vm.network :forwarded_port, host: 5432, guest: 5432
 
- config.vm.synced_folder ".", "/vagrant", :nfs => true
+ config.vm.synced_folder ".", "/vagrant", :nfs => false
 
  config.vm.provision "chef_solo" do |chef|
   chef.cookbooks_path = ["cookbooks", "chef/applications", "chef/environments", "chef/roles"]
   chef.data_bags_path = ["chef/data_bags"]
   chef.add_recipe "env_whitebox"
+
+  chef.json = {
+      :mysql => {
+          :server_root_password => 'root',
+          :server_debian_password => 'root',
+          :server_repl_password => 'root',
+          :tunable => {
+             :innodb_file_per_table => 1,
+             :max_allowed_packet => '256M',
+          }
+      }
+  }
  end
 
  config.vm.provider :virtualbox do |vb|

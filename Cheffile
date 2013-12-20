@@ -50,6 +50,7 @@ cookbook "iotop"
 #j
 
 cookbook "java"
+cookbook "jenkins"
 
 #k
 
@@ -80,14 +81,14 @@ cookbook 'postgis2',
   :git => 'git://github.com/vasilykraev/cookbook-postgis.git',
   :ref => 'master'
 cookbook "postgresql"
-cookbook "postfix"
+cookbook "postfix", "3.0.0"
 
 cookbook "phing",
   :git => 'https://github.com/goruha/chef-phing',
   :ref => 'add_shell_timeout_support'
 cookbook "php",
   :git => 'https://github.com/goruha/chef-php',
-  :ref => 'pear_add_timeout'
+  :ref => 'php_fpm_settings_debian'
 cookbook 'phpmyadmin',
   :git => 'git://github.com/priestjim/chef-phpmyadmin.git',
   :ref => 'master'
@@ -103,7 +104,7 @@ cookbook "python"
 #r
 
 #s
-
+cookbook "ssh_known_hosts"
 cookbook "sphinx",
   :git => 'https://github.com/goruha/sphinx-cookbook.git',
   :ref => 'master'
@@ -127,9 +128,8 @@ cookbook "vim"
 
 #y
 
-cookbook "yumrepo",
-  :git => 'https://github.com/priestjim/yum.git',
-  :ref => 'add-atomic-repository'
+cookbook "yumrepo", "2.0.0"
+
 
 #z
 
@@ -138,3 +138,9 @@ cookbook 'zip',
   :ref => 'master'
 
 cookbook "zsh"
+
+cookbook 'dmg', "2.0.4"
+
+cookbook "yum", "2.3.2"
+
+
