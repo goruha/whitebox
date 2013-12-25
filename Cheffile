@@ -122,7 +122,7 @@ cookbook "varnish"
 cookbook "vim"
 
 #w
-
+cookbook 'windows', :git => 'https://github.com/SimpleFinance/chef-windows.git'
 #x
 
 #y
