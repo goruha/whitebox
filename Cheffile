@@ -7,7 +7,7 @@ site 'http://community.opscode.com/api/v1'
 #a
 
 cookbook "apache2"
-cookbook "apt", "1.9.2"
+cookbook "apt"
 
 #b
 
@@ -20,7 +20,7 @@ cookbook "cron"
 cookbook 'chef-solo-search',
   :git => 'https://github.com/edelight/chef-solo-search',
   :ref => 'master'
-
+cookbook "composer", "0.0.5"
 #d
 
 cookbook 'drush',
