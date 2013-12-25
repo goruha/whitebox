@@ -18,4 +18,5 @@ end
 include_recipe "app_jenkins"
 include_recipe "jenkins::proxy"
 include_recipe "app_drupal::develop"
+include_recipe "drush"
 
