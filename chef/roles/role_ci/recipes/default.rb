@@ -9,6 +9,12 @@ directory "#{ssh_dir}" do
   action :create
 end
 
+directory "/var/www" do
+  owner "www-data"
+  recursive :true
+  action :create
+end
+
 cookbook_file "#{ssh_dir}/id_rsa" do
   cookbook "role_ci"
   source "id_rsa"
