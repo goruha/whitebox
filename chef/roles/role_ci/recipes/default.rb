@@ -9,9 +9,13 @@ directory "#{ssh_dir}" do
   action :create
 end
 
+directory "/var" do
+  owner "www-data"
+  action :create
+end
+
 directory "/var/www" do
   owner "www-data"
-  recursive :true
   action :create
 end
 
