@@ -11,7 +11,7 @@ cookbook "apt"
 
 #b
 
-cookbook "build-essential"
+cookbook "build-essential", "1.4.0"
 
 #c
 
@@ -102,6 +102,10 @@ cookbook "python"
 #q
 
 #r
+cookbook "rvm",
+  :git =>"https://github.com/fnichol/chef-rvm.git",
+  :ref => "master"
+
 #s
 cookbook "ssh_known_hosts"
 cookbook "sphinx",
