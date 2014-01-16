@@ -7,5 +7,5 @@ include_recipe "rvm::user_install"
 
 gem_package "capistrano-rvm" do
   action :install
-  version '3.0'
+  version '3.0.0'
 end
