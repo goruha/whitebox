@@ -8,3 +8,5 @@ end
 gem_package "rvm-capistrano" do
   action :install
 end
+
+disable_rvm_shell
