@@ -5,6 +5,6 @@ gem_package "capistrano" do
   version '2.15.5'
 end
 
-gem_package "capistrano-rvm" do
+gem_package "rvm-capistrano" do
   action :install
 end
