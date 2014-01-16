@@ -46,7 +46,7 @@ cookbook "htop"
 #i
 
 cookbook "iotop",
-  :git => 'git@github.com:korishev/iotop.git',
+  :git => 'https://github.com/korishev/iotop.git',
   :ref => 'master'
 
 #j
