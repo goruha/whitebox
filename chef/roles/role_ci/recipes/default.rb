@@ -36,5 +36,10 @@ include_recipe "app_drupal::deploy"
 
 link "/home/jenkins/.rvm/bin/rvm" do
   to "/usr/bin"
+  action :delete
+end
+
+link "/usr/bin" do
+  to "/home/jenkins/.rvm/bin/rvm"
 end
 
