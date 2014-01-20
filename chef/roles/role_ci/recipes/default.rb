@@ -34,7 +34,4 @@ include_recipe "app_drupal::deploy"
 #include_recipe "drush"
 
 
-link "/home/jenkins/.rvm/bin/rvm" do
-  to "/usr/bin"
-end
 
