@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
  config.vm.provision "chef_solo" do |chef|
   chef.cookbooks_path = ["cookbooks", "chef/applications", "chef/environments", "chef/roles"]
   chef.data_bags_path = ["chef/data_bags"]
+  chef.add_recipe "rvm::vagrant"
   chef.add_recipe "env_whitebox"
 
   chef.json = {
@@ -25,6 +26,12 @@ Vagrant.configure("2") do |config|
           :tunable => {
              :innodb_file_per_table => 1,
              :max_allowed_packet => '256M',
+          }
+      },
+      :rvm => {
+          :vagrant => {
+              :system_chef_solo => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-solo',
+              :system_chef_client => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-client'
           }
       }
   }

@@ -37,3 +37,4 @@ set['jenkins']['server']['plugins'] = [ 'greenballs',
                                       ]
 default['jenkins']['server']['config']['uri'] = 'git@github.com:VladimirTS/jenkins_config-1.git'
 default['jenkins']['server']['config']['branch'] = 'master'
+set['jenkins']['node']['home'] = '/var/lib/jenkins'

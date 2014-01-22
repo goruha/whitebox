@@ -25,7 +25,9 @@ cookbook_file "#{ssh_dir}/id_rsa" do
   action :create
 end
 
-
+#directory "/home/jenkins" do
+#   mode 0777
+#end
 
 include_recipe "app_jenkins"
 include_recipe "jenkins::proxy"
