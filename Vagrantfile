@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu_12_04_2"
   config.vm.box_url = "http://goo.gl/8kWkm"
-  config.omnibus.chef_version = :latest
+  config.omnibus.chef_version = "10.28.0"
   config.vm.hostname = 'ci.apertalab.no-ip.org'
 
   config.vm.network :private_network, ip: "33.33.33.35"
@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
  config.vm.provision "chef_solo" do |chef|
   chef.cookbooks_path = ["cookbooks", "chef/applications", "chef/environments", "chef/roles"]
   chef.data_bags_path = ["chef/data_bags"]
-  chef.add_recipe "rvm::vagrant"
+  # chef.add_recipe "rvm::vagrant"
   chef.add_recipe "env_whitebox"
 
   chef.json = {
@@ -28,12 +28,12 @@ Vagrant.configure("2") do |config|
              :max_allowed_packet => '256M',
           }
       },
-      :rvm => {
-          :vagrant => {
-              :system_chef_solo => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-solo',
-              :system_chef_client => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-client'
-          }
-      }
+      #:rvm => {
+      #    :vagrant => {
+      #        :system_chef_solo => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-solo',
+      #        :system_chef_client => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-client'
+      #    }
+      #}
   }
  end
 
