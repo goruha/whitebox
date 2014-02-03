@@ -19,6 +19,7 @@ rbenv_gem "bundler" do
   ruby_version "1.8.7-p352"
 end
 
+
 rbenv_gem "capistrano" do
   ruby_version "1.8.7-p352"
 end
