@@ -31,17 +31,18 @@ directory "/opt/rbenv" do
   mode    0777
 end
 
-bash "change version ruby" do
-  code <<-EOH
-  rbenv global 1.8.7-p352
-  EOH
-end
+#bash "change version ruby" do
+#  code <<-EOH
+#  rbenv global 1.8.7-p352
+#  EOH
+#end
+#
+#bash "install capistrano 2.15.5" do
+#  code <<-EOH
+#  gem install capistrano --version "=2.15.5"
+#  EOH
+#end
 
-bash "install capistrano 2.15.5" do
-  code <<-EOH
-  gem install capistrano --version "=2.15.5"
-  EOH
-end
 #rvm_gemset "jenkins" do
 #  ruby_string "ruby-1.8.7"
 #  action      :create
