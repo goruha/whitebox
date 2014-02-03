@@ -10,35 +10,35 @@ Vagrant.configure("2") do |config|
   #config.vm.network :forwarded_port, host: 3306, guest: 3306
   #config.vm.network :forwarded_port, host: 5432, guest: 5432
 
- config.vm.synced_folder ".", "/vagrant", :nfs => false
+  config.vm.synced_folder ".", "/vagrant", :nfs => false
 
- config.vm.provision "chef_solo" do |chef|
-  chef.cookbooks_path = ["cookbooks", "chef/applications", "chef/environments", "chef/roles"]
-  chef.data_bags_path = ["chef/data_bags"]
-  # chef.add_recipe "rvm::vagrant"
-  chef.add_recipe "env_whitebox"
+  config.vm.provision "chef_solo" do |chef|
+    chef.cookbooks_path = ["cookbooks", "chef/applications", "chef/environments", "chef/roles"]
+    chef.data_bags_path = ["chef/data_bags"]
+    # chef.add_recipe "rvm::vagrant"
+    chef.add_recipe "env_whitebox"
 
-  chef.json = {
-      :mysql => {
-          :server_root_password => 'root',
-          :server_debian_password => 'root',
-          :server_repl_password => 'root',
-          :tunable => {
-             :innodb_file_per_table => 1,
-             :max_allowed_packet => '256M',
-          }
-      },
-      #:rvm => {
-      #    :vagrant => {
-      #        :system_chef_solo => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-solo',
-      #        :system_chef_client => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-client'
-      #    }
-      #}
-  }
- end
+    chef.json = {
+        :mysql => {
+            :server_root_password => 'root',
+            :server_debian_password => 'root',
+            :server_repl_password => 'root',
+            :tunable => {
+                :innodb_file_per_table => 1,
+                :max_allowed_packet => '256M',
+            }
+        },
+        #:rvm => {
+        #    :vagrant => {
+        #        :system_chef_solo => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-solo',
+        #        :system_chef_client => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-client'
+        #    }
+        #}
+    }
+  end
 
- config.vm.provider :virtualbox do |vb|
-  vb.customize ["modifyvm", :id, "--memory", "1024"]
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
 #  vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
- end
+  end
 end

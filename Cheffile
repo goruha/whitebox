@@ -104,9 +104,11 @@ cookbook "python"
 #q
 
 #r
-cookbook "rvm",
-  :git =>"https://github.com/fnichol/chef-rvm.git",
-  :ref => "master"
+#cookbook "rvm",
+#  :git =>"https://github.com/fnichol/chef-rvm.git",
+#  :ref => "master"
+
+cookbook "rbenv", "1.5.0"
 
 #s
 cookbook "ssh_known_hosts"

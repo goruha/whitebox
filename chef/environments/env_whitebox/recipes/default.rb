@@ -12,3 +12,4 @@ template '/etc/cron.d/chef_solo' do
   mode 00644
 end
 
+
