@@ -24,10 +24,6 @@ rbenv_gem "capistrano" do
   ruby_version "1.8.7-p352"
 end
 
-rbenv_gem "librarian-chef" do
-  ruby_version "1.8.7-p352"
-end
-
 
 directory "/opt/rbenv" do
   owner  "jenkins"
