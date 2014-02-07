@@ -148,7 +148,7 @@ cookbook "zsh"
 
 cookbook 'dmg', "2.0.4"
 
-cookbook "yum", "2.4.4"
+cookbook "yum", "3.0.0"
 
 
 
