@@ -52,7 +52,7 @@ cookbook "iotop",
 #j
 
 cookbook "java"
-cookbook "jenkins"
+cookbook "jenkins", "1.2.0"
 
 #k
 
