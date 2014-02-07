@@ -135,7 +135,7 @@ cookbook 'windows', "1.10.0"
 
 #y
 
-cookbook "yumrepo", "2.0.0"
+#cookbook "yumrepo", "2.0.0"
 
 
 #z
