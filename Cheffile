@@ -37,7 +37,7 @@ cookbook "firewall",
 
 #g
 
-cookbook "git"
+cookbook "git", "2.7.0"
 
 #h
 
