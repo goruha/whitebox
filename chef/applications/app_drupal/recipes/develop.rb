@@ -56,7 +56,7 @@ php_pear "VersionControl_SVN" do
   shell_timeout 180000
 end
 
-include_recipe "phpunit"
+#include_recipe "phpunit"
 include_recipe "phing"
 
 package "patch"
