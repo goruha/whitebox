@@ -52,7 +52,7 @@ cookbook "iotop",
 #j
 
 cookbook "java"
-cookbook "jenkins"
+cookbook "jenkins", "1.2.0"
 
 #k
 
@@ -135,7 +135,7 @@ cookbook 'windows', "1.10.0"
 
 #y
 
-cookbook "yumrepo", "2.0.0"
+#cookbook "yumrepo", "2.0.0"
 
 
 #z
@@ -148,7 +148,7 @@ cookbook "zsh"
 
 cookbook 'dmg', "2.0.4"
 
-cookbook "yum", "2.3.2"
+#cookbook "yum", "2.3.2"
 
 
 
