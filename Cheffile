@@ -86,7 +86,7 @@ cookbook "postgresql"
 cookbook "postfix", "3.0.0"
 
 cookbook "phing",
-  :git => 'https://github.com/goruha/chef-phing',
+  :git => 'https://github.com/VladimirTS/chef-phing.git',
   :ref => 'add_shell_timeout_support'
 cookbook "php",
   :git => 'https://github.com/ffuenf/chef-php.git',
