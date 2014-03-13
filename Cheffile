@@ -88,9 +88,7 @@ cookbook "postfix", "3.0.0"
 cookbook "phing",
   :git => 'https://github.com/goruha/chef-phing',
   :ref => 'add_shell_timeout_support'
-cookbook "php",
-  :git => 'https://github.com/goruha/chef-php',
-  :ref => 'php_fpm_settings_debian'
+cookbook "php"
 cookbook 'phpmyadmin',
   :git => 'git://github.com/priestjim/chef-phpmyadmin.git',
   :ref => 'master'
