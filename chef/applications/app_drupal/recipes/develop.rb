@@ -23,11 +23,11 @@ php_pear "PHP_PMD" do
   shell_timeout 9000
 end
 
-php_pear "PHP_CodeSniffer" do
-  action :upgrade
-  shell_timeout 9000
-  version '1.4.7'
-end
+#php_pear "PHP_CodeSniffer" do
+#  action :upgrade
+#  shell_timeout 9000
+#  version '1.4.7'
+#end
 
 directory '/usr/share/drupal'
 
