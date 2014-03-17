@@ -89,7 +89,7 @@ cookbook "phing",
   :git => 'https://github.com/VladimirTS/chef-phing.git',
   :ref => 'add_shell_timeout_support'
 cookbook "php",
-  :git => 'https://github.com/ffuenf/chef-php.git',
+  :git => 'https://github.com/VladimirTS/chef-php.git',
   :ref => 'master'
 cookbook 'phpmyadmin',
   :git => 'git://github.com/priestjim/chef-phpmyadmin.git',

@@ -27,13 +27,7 @@ Vagrant.configure("2") do |config|
                 :innodb_file_per_table => 1,
                 :max_allowed_packet => '256M',
             }
-        },
-        #:rvm => {
-        #    :vagrant => {
-        #        :system_chef_solo => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-solo',
-        #        :system_chef_client => '/usr/lib/ruby/gems/1.8/gems/chef-11.4.0/bin/chef-client'
-        #    }
-        #}
+        }
     }
   end
 
