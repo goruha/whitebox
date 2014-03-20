@@ -33,7 +33,8 @@ include_recipe "app_jenkins"
 include_recipe "jenkins::proxy"
 include_recipe "app_drupal::develop"
 include_recipe "app_drupal::deploy"
-include_recipe "app_virtual_host::default"
+include_recipe "app_drupal::default"
+#include_recipe "app_virtual_host::default"
 #include_recipe "drush"
 
 
