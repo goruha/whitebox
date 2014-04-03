@@ -60,7 +60,7 @@ cookbook "jenkins", "1.2.0"
 
 #m
 
-cookbook "mysql"
+cookbook "mysql", "3.0.4"
 cookbook "memcached"
 
 #n
@@ -90,7 +90,7 @@ cookbook "phing",
   :ref => 'add_shell_timeout_support'
 cookbook "php",
   :git => 'https://github.com/VladimirTS/chef-php.git',
-  :ref => 'master'
+  :ref => 'php-fpm'
 cookbook 'phpmyadmin',
   :git => 'git://github.com/priestjim/chef-phpmyadmin.git',
   :ref => 'master'
@@ -99,6 +99,9 @@ cookbook 'phppgadmin',
   :ref => 'master'
 cookbook "phpunit"
 
+#cookbook "php-fpm",
+#  :git => 'https://github.com/yevgenko/cookbook-php-fpm.git',
+#  :ref => 'master'
 cookbook "python"
 
 #q

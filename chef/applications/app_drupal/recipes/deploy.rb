@@ -3,7 +3,7 @@
 include_recipe "rbenv::default"
 include_recipe "rbenv::ruby_build"
 include_recipe "rbenv::rbenv_vars"
-
+include_recipe "php::php-fpm"
 rbenv_ruby "1.9.3-p194"
 
 rbenv_ruby "1.8.7-p352"
@@ -27,6 +27,9 @@ directory "/opt/rbenv" do
   group  "jenkins"
   mode    0777
 end
+
+
+php_fpm_pool "crm.apertalab.no-ip.org"
 
 #web_app "crm.apertalab.no-ip.org" do
 #  server_name "crm.apertalab.no-ip.org"
